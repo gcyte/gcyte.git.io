@@ -1,0 +1,249 @@
+/*=================GENERAL========*/
+body {
+  font-family: "open sans", ans-serif;
+  background-color: #040404;
+  color: #fff;
+  position: relative;
+
+  background: black;
+}
+
+body::before{
+  content: "";
+  position: fixed;
+  background: #040404;
+  z-index: -1;
+}
+@midia (min-width: 1024px){
+  body::before {
+    background-attachment: fixed;
+  }
+}
+a {
+  color: #18d26e;
+}
+a:hover{
+  color: #18d26e;
+  text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: "reilewa",sans-serif;
+}
+
+/*=======particles===========*/
+.particles-js-canvas-el {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+
+/*===========header========*/
+#header{
+  transition: ease-in-out 0.3s;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  z-index: 997;
+  overflow-y: auto;
+}
+#header * {
+  transition: ease-in-out 0.3s;
+}
+#header h1 {
+  font-size: 48px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 700;
+  font-family: "popins", sans-serif;
+}
+#header h1 a,
+#header h1 a:hover{
+  color: #fff;
+  line-height: 1;
+  display: inline-block;
+}
+#header h2 {
+  font-size: 24px;
+  margin-top: 20px;
+  color: rgba (255,255,255,0.8);
+}
+#header h2 span {
+  color: #fff;
+  border-bottom: 2px solid #18d26e;
+  padding-bottom: 6px;
+}
+#header h2 span:hover {
+  color: #fff;
+  border-bottom: 2px solid #ff28f4;
+  padding-bottom: 6px;
+}
+#header .social-links{
+   margin-top: 40px;
+   display: flex;
+}
+#header .social-links a{
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  line-height: 1;
+  margin-right: 8px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+#header .social-links a:hover{
+  background: #18d26e;
+}
+
+@midia (max-width:992px){
+  #header h1 {
+    font-size: 36px;
+  }
+  #header h2 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  #header .social-links{
+    margin-top: 15px;
+  }
+  #header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/*=========Nav Bar======*/
+.navbar{
+  position: relative;
+  z-index: 100000000000000;
+}
+.navbar ul{
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.navbar li + li {
+  margin-left: 30px;
+}
+.navbar a {
+  display: block;
+  position: relative;
+  color: rgba(255,255,255,0.7);
+  font-size: 16px;
+  font-family: "poppins", sans-serif;
+  font-weight: 400;
+}
+.navbar a::before{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #18d26e;
+  visibility: hidden;
+  width: 0px;
+  transition: all 0.3s ease-in-out 0s;
+}
+.navbar a:hover::before,
+.navbar li:hover > a::before,
+.navbar .active > a::before{
+  visibility: visible;
+  width: 25px;
+}
+.navbar a:hover,
+.navbar.active > a,
+.navbar li:hover > a{
+  color: #fff;
+  text-decoration: none;
+}
+
+
+/*===========ABOUT ============*/
+#about {
+    position: relative;
+      background: black;
+}
+.about-me .contact h3{
+  font-weight: none;
+  font-size: 26px;
+  color: #18d26e;
+  z-index: 2;
+}
+.about-me .content ul {
+  list-style: none;
+  padding: 0;
+}
+.about-me .content ul li {
+  padding-bottom: 10px;
+}
+.about-me .content ul i {
+  font-size: 20px;
+  padding-right: 2px;
+  color: #18d36e
+}
+.about-me .content p:last-child{
+  margin-bottom: 0;
+}
+/*=========Count box======*/
+.counts{
+  padding: 70px 0 60px;
+}
+.counts .count-box {
+  padding: 30px 30px 25px 30px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  background: rgba(255,255,255,0.08);
+}
+.counts .count-box i {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 24px;
+  background: rgba(255,255, 255, 0.1);
+  padding: 12px;
+  color: #18d26e
+  border-radius: 50%;
+}
+.counts .count-box span{
+  font-size: 36px;
+  display: block;
+  font-weight: 600;
+  color: #fff;
+
+}
+.counts .count-box p{
+  padding: 0;
+  margin: 0;
+  font-family: "raleway",sans-serif;
+  font-size: 14px;
+}
+
+/*================C6ntact==============*/
+
+.contact{
+  position: relative;
+  padding-top: 50px;
+  z-index: 3;
+}
+.contact-card{
+ margin-bottom: 4px;
+  width: 100%;
+  position: relative;
+  text-align: left;
+  background: rgba(255,255,255,0.08);
+}
+.contact-card {
+  margin-right: 10px;
+  font-size: 24px;
+}
